@@ -3,7 +3,7 @@ name: Release Java Artifact
 on:
   push:
     tags:
-      - 'v*' 
+      - 'v*'
 
 jobs:
   build-and-test:
@@ -53,3 +53,4 @@ jobs:
           tag: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           generateReleaseNotes: true
+          token: ${{ secrets.TOKEN }}
